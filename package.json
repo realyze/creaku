@@ -1,0 +1,33 @@
+{
+  "name": "creaku",
+  "version": "0.0.1",
+  "description": "Heroku app creator",
+  "main": "index.coffee",
+  "bin": {
+    "creaku": "./bin/creaku.js"
+  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/realyze/creaku"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "tomas@salsitasoft.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realyze/creaku/issues"
+  },
+  "homepage": "https://github.com/realyze/creaku",
+  "dependencies": {
+    "heroku-client": "^1.2.0",
+    "js-yaml": "^3.0.2",
+    "coffee-script": "^1.7.1",
+    "minimist": "0.0.8",
+    "q": "^1.0.1",
+    "keypress": "^0.2.1"
+  }
+}
