@@ -10,12 +10,12 @@ Run `npm install -g creaku`.
 
 # Usage
 ```
-> creaku <my\_conf.cfg> --key <MY\_HEROKU\_API\_KEY>
+> creaku <my_conf.cfg> --key <MY_HEROKU_API_KEY>
 ```
 or
 ```
-> export HEROKU_API_KEY=<MY\_HEROKU\_API\_KEY>
-> creaku <my\_conf.cfg>
+> export HEROKU_API_KEY=<MY_HEROKU_API_KEY>
+> creaku <my_conf.cfg>
 ```
 
 ### Configuration file
