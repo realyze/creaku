@@ -3,6 +3,7 @@ Heroku = require 'heroku-client'
 {readFileSync} = require 'fs'
 Q = require 'q'
 keypress = require 'keypress'
+_ = require 'underscore'
 
 argv = require('minimist')(process.argv.slice(2))
 
@@ -12,11 +13,9 @@ if argv._.length == 0
 
 if not argv.key and not process.env.HEROKU_API_KEY
   console.log "Please specify your Heroku API key."
-  process.exit 2
+  process.exit 1
 
 config = safeLoad readFileSync argv._[0], 'utf8'
-
-#stdin = process.openStdin()
 
 console.log "This will create #{config.envs.length} heroku apps " +
   "with the following configuration: "
@@ -52,7 +51,11 @@ defer.promise.then ->
       console.log "Setting env vars for #{name}..."
       heroku.apps(name).configVars().update(cfg.envVars)
     .then ->
-      console.log "App #{name} env vars updated."
+      Q.all _.map config.collaborators, (email) ->
+        console.log "Adding #{email} to #{name}..."
+        heroku.apps(name).collaborators().create({user: email})
+    .then ->
+      console.log "App #{name} done."
 
   for env in config.envs
     createApp(config, env).done()
