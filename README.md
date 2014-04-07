@@ -1,6 +1,8 @@
 creaku
 ======
 
+![creaku](http://uploadingit.com/file/yll6yonmcmgg4cca/creaku)
+
 Heroku app creator. Useful when you want to create an app and clone it to create multiple environments.
 
 # Installation
