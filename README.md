@@ -1,7 +1,7 @@
 creaku
 ======
 
-Heroku app creator.
+Heroku app creator. Useful when you want to create an app and clone it to create multiple environments.
 
 # Installation
 Run `npm install -g creaku`.
@@ -29,4 +29,8 @@ envVars:
 envs:
  - foo
  - bar
+# Add collaborators.
+collaborators:
+ - john.doe@sev.en
+ - david.mills@sev.en
 ```
