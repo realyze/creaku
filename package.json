@@ -1,11 +1,11 @@
 {
   "name": "creaku",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Heroku app creator",
   "main": "index.coffee",
   "bin": {
     "creaku": "./bin/creaku.js"
-  }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
