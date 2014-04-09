@@ -23,12 +23,13 @@
   },
   "homepage": "https://github.com/realyze/creaku",
   "dependencies": {
+    "coffee-script": "^1.7.1",
+    "coffee-splatters": "0.0.4",
     "heroku-client": "^1.2.0",
     "js-yaml": "^3.0.2",
-    "coffee-script": "^1.7.1",
+    "keypress": "^0.2.1",
     "minimist": "0.0.8",
     "q": "^1.0.1",
-    "keypress": "^0.2.1",
     "underscore": "^1.6.0"
   }
 }
